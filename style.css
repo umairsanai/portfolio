@@ -100,8 +100,9 @@ nav a:hover {
 .bio {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 700px;
+    max-width: 900px;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .social-links a {
