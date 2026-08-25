@@ -13,13 +13,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -166,6 +166,90 @@ section {
     color: var(--text-secondary);
 }
 
+/* Experience */
+.experience-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a2e37;
+    transition: all 0.2s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+    background-color: var(--card-hover);
+    border-color: var(--accent);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    font-size: 1.25rem;
+}
+
+.company {
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.experience-date {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.experience-details {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    list-style: none;
+    padding: 0;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 1.75rem;
+}
+
+.experience-details li::before {
+    content: "";
+    position: absolute;
+    top: 0.55em;
+    left: 0.1rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    z-index: 1;
+}
+
+.experience-details li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(0.55em + 0.6rem);
+    bottom: -0.6rem;
+    left: 0.4rem;
+    width: 1px;
+    background-color: #39404d;
+}
+
+.experience-card:hover .experience-details li::before {
+    background-color: var(--card-hover);
+}
+
+.experience-details li + li {
+    margin-top: 0.6rem;
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid;
@@ -254,6 +338,11 @@ footer {
         grid-column: auto;       /* Stop spanning columns */
         justify-self: stretch;   /* Fill the available space */
         width: 100%;             /* Override the 50% calculation */
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 
