@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
@@ -45,7 +45,7 @@ nav {
 }
 
 .nav-content {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
     display: flex;
@@ -108,16 +108,37 @@ nav a:hover {
 }
 
 .subtitle {
+    display: grid;
+    gap: 0.4rem;
+    list-style: none;
     font-size: 1.25rem;
     color: var(--accent);
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    line-height: 1.35;
+}
+
+.subtitle svg {
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }
 
 .bio {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 900px;
+    max-width: 1000px;
     margin-bottom: 2rem;
     text-align: justify;
 }
@@ -320,7 +341,7 @@ section {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 6rem;
+    max-width: 6.5rem;
     flex-shrink: 0;
 }
 
@@ -418,6 +439,30 @@ footer {
     .experience-header {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    #hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.08em;
+    }
+
+    .subtitle {
+        gap: 0.75rem;
+        margin-bottom: 2.25rem;
+        font-size: clamp(1rem, 4.5vw, 1.25rem);
+    }
+
+    .subtitle li {
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .subtitle svg {
+        width: 1.7rem;
+        height: 1.7rem;
+        flex-basis: 1.7rem;
+        margin-top: 0.05rem;
     }
 }
 
