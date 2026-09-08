@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umairsanai.github.io/portfolio/sitemap.xml
