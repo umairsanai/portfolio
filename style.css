@@ -213,6 +213,11 @@ section {
     transition: all 0.2s ease;
 }
 
+/* Keep every experience card separated, including cards added later. */
+.experience-card + .experience-card {
+    margin-top: 1.5rem;
+}
+
 .experience-card:hover {
     transform: translateY(-4px);
     background-color: var(--card-hover);
